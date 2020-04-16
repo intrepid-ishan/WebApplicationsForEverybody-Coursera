@@ -1,8 +1,4 @@
 
-# What i earned?
-
-<pre><a href="https://www.coursera.org/account/accomplishments/certificate/ENG6ZGE7ET3A" target="_blank" >Course Certificate</a></pre>
-
 # What i learned? 
 
 <pre>
