@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             if(isset($_POST['year']) && isset($_POST['mileage']) && isset($_POST['year'])){
                     if(strlen($_POST['make']) < 1){    
                         $_SESSION['failure'] = "Make is required";
-                        header("Location: add.php");
+                        header("Location: add.php"); //GET request
                         return;
                         // $failure=true;
                         // $failure1 = "Make is required";
@@ -56,14 +56,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                             // $success1 = "Record inserted" ;  
                             // $success=true; 
                             $_SESSION['success'] = "Record inserted";
-                            header("Location: view.php");
+                            header("Location: view.php"); 
                             return;                               
                     }
                     else{
                             // $failure=true;
                             // $failure1 = "Mileage and year must be numeric";
                             $_SESSION['failure'] = "Mileage and year must be numeric";
-                            header("Location: add.php");
+                            header("Location: add.php"); //GET REQUEST
                             return;
                     }
             }    
