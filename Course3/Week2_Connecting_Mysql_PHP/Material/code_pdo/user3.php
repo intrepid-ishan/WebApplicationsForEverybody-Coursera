@@ -13,7 +13,7 @@ if ( isset($_POST['name']) && isset($_POST['email'])
         ':password' => $_POST['password']));
 }
 
-if ( isset($_POST['delete']) && isset($_POST['user_id']) ) {
+if ( isset($_POST['delete']) && isset($_POST['user_id']) ) { // delete pressed + value inside user_id
     $sql = "DELETE FROM users WHERE user_id = :zip";
     echo "<pre>\n$sql\n</pre>\n";
     $stmt = $pdo->prepare($sql);
@@ -34,8 +34,8 @@ foreach ( $rows as $row ) {
     echo("</td><td>");
     echo($row['password']);
     echo("</td><td>");
-    echo('<form method="post"><input type="hidden" ');
-    echo('name="user_id" value="'.$row['user_id'].'">'."\n");
+    echo('<form method="post"><input type="hidden" ');               //type hidden 
+    echo('name="user_id" value="'.$row['user_id'].'">'."\n");        //predefined value set so post submission contains user_id in $_POST['user_id']   
     echo('<input type="submit" value="Del" name="delete">');
     echo("\n</form>\n");
     echo("</td></tr>\n");
