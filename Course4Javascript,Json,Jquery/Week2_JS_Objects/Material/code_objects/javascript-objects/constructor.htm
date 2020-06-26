@@ -1,0 +1,20 @@
+<!-- --------constructors-------- -->
+<script type="text/javascript">
+function PartyAnimal() {
+    this.x = 0;
+    console.log("In the 'constructor'");
+
+    //inside this function's code is not run at time of new, just intialized
+    this.party = function () {
+        this.x = this.x + 1;
+        console.log("So far "+this.x);
+    }
+}
+
+//when "an" is created it runs whole code of PartyAnimal i.e x , party 
+//new is responsible for running code this code
+an = new PartyAnimal();
+an.party();
+an.party();
+an.party();
+</script>

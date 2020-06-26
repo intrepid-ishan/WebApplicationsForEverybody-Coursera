@@ -1,0 +1,23 @@
+<!-- --------class and object with functions-------- -->
+<script type="text/javascript">
+
+//named function PartyAnimal
+function PartyAnimal() {
+    this.x = 0;
+
+
+    //anonymous function, name of function is party
+    //so all code is under party
+    this.party = function () {
+        this.x = this.x + 1;
+        console.log("So far "+this.x);
+    }
+}
+
+//an is instance
+// to use the function in different way use new to create instance of class PartyAnimal
+an = new PartyAnimal();
+an.party();
+an.party();
+an.party();
+</script>
